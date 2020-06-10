@@ -1,7 +1,7 @@
 ---
 date: '2'
 title: 'Ticket Market'
-cover: './demo-tech_connector2.png'
+cover: './demo-ticket-market.png'
 github: 'https://github.com/PiotrNap/ticket_market'
 external: 'http://www.ticket-market-app.xyz/'
 tech:
