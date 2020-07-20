@@ -121,6 +121,29 @@ const StyledFeaturedImg = styled(Img)`
     filter: grayscale(100%) contrast(1) brightness(80%);
   `};
 `;
+
+const StyledContentDetail = styled.div`
+  position: absolute;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  background-color: transparent;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  & h3 {
+    color: ${colors.lightSlate};
+    font-family: ${fonts.SFMono};
+    font-size: 34px;
+  }
+`;
+
 const StyledImgContainer = styled.a`
   ${mixins.boxShadow};
   grid-column: 6 / -1;
@@ -137,11 +160,22 @@ const StyledImgContainer = styled.a`
   `};
   &:hover,
   &:focus {
-    background: transparent;
-    &:before,
-    ${StyledFeaturedImg} {
+    &.styled-img-available {
       background: transparent;
-      filter: none;
+      &:before {
+        background: transparent;
+        filter: none;
+      }
+    }
+    ${StyledContentDetail} {
+      opacity: 1;
+    }
+
+    ${StyledFeaturedImg} {
+      &.styled-featured-available {
+        background: transparent;
+        filter: none;
+      }
     }
   }
   &:before {
@@ -159,6 +193,7 @@ const StyledImgContainer = styled.a`
     mix-blend-mode: screen;
   }
 `;
+
 const StyledProject = styled.div`
   display: grid;
   grid-gap: 10px;
@@ -222,7 +257,7 @@ const Featured = ({ data }) => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover } = frontmatter;
+            const { external, title, tech, github, cover, available } = frontmatter;
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
@@ -274,8 +309,20 @@ const Featured = ({ data }) => {
                 <StyledImgContainer
                   href={external ? external : github ? github : '#'}
                   target="_blank"
-                  rel="nofollow noopener noreferrer">
-                  <StyledFeaturedImg fluid={cover.childImageSharp.fluid} alt={title} />
+                  rel="nofollow noopener noreferrer"
+                  className={available ? 'styled-img-available' : ''}
+                  available={available}>
+                  <StyledFeaturedImg
+                    fluid={cover.childImageSharp.fluid}
+                    alt={title}
+                    available={available}
+                    className={available ? 'styled-featured-available' : ''}
+                  />
+                  {!available && (
+                    <StyledContentDetail>
+                      <h3>Currently Unavailable</h3>
+                    </StyledContentDetail>
+                  )}
                 </StyledImgContainer>
               </StyledProject>
             );

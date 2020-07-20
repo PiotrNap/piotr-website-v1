@@ -1,14 +1,15 @@
 ---
-date: '2'
+date: '1'
 title: 'Ticket Market'
 cover: './demo-ticket-market.png'
 github: 'https://github.com/PiotrNap/ticket_market'
-external: 'http://www.ticket-market-app.xyz/'
+# external: 'http://www.ticket-market-app.xyz/'
 tech:
   - React
   - Node.js
   - Typescript
   - Next.js
+available: false
 ---
 
 A web app build with a microservices approach for creating, buying and selling tickets to others.
