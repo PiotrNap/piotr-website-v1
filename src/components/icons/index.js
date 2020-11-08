@@ -7,3 +7,4 @@ export { default as IconLinkedin } from './linkedin';
 export { default as IconLocation } from './location';
 export { default as IconLogo } from './logo';
 export { default as IconFacebook } from './facebook';
+export { default as IconYoutube } from './youtube';

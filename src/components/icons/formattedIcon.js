@@ -9,11 +9,11 @@ import {
   IconLocation,
   IconLogo,
   IconFacebook,
+  IconYoutube,
 } from '@components/icons';
 
 const FormattedIcon = ({ name }) => {
   switch (name) {
-    
     case 'External':
       return <IconExternal />;
     case 'Folder':
@@ -26,6 +26,8 @@ const FormattedIcon = ({ name }) => {
       return <IconInstagram />;
     case 'Linkedin':
       return <IconLinkedin />;
+    case 'YouTube':
+      return <IconYoutube />;
     case 'Location':
       return <IconLocation />;
     case 'Logo':

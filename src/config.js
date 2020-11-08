@@ -22,12 +22,8 @@ module.exports = {
       url: 'https://www.linkedin.com/in/piotr-napierala-038661135/',
     },
     {
-      name: 'Facebook',
-      url: 'https://www.facebook.com/profile.php?id=100002893912719',
-    },
-    {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/piotrnap94/',
+      name: 'YouTube',
+      url: 'https://www.youtube.com/channel/UCjQS5rdafvKW72D4uM_-MUQ',
     },
   ],
   navLinks: [
