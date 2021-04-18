@@ -8,3 +8,4 @@ export { default as IconLocation } from './location';
 export { default as IconLogo } from './logo';
 export { default as IconFacebook } from './facebook';
 export { default as IconYoutube } from './youtube';
+export { default as IconGitLab } from './gitlab';

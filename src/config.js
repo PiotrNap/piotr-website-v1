@@ -18,6 +18,10 @@ module.exports = {
       url: 'https://github.com/PiotrNap',
     },
     {
+      name: 'GitLab',
+      url: 'https://gitlab.com/piotr.napierala94',
+    },
+    {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/piotr-napierala-038661135/',
     },

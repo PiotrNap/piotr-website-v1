@@ -10,6 +10,7 @@ import {
   IconLogo,
   IconFacebook,
   IconYoutube,
+  IconGitLab,
 } from '@components/icons';
 
 const FormattedIcon = ({ name }) => {
@@ -22,6 +23,8 @@ const FormattedIcon = ({ name }) => {
       return <IconFacebook />;
     case 'GitHub':
       return <IconGitHub />;
+    case 'GitLab':
+      return <IconGitLab />;
     case 'Instagram':
       return <IconInstagram />;
     case 'Linkedin':
