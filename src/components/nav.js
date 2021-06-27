@@ -162,12 +162,15 @@ const StyledResumeButton = styled.a`
 const DELTA = 5;
 
 class Nav extends Component {
-  state = {
-    isMounted: !this.props.isHome,
-    menuOpen: false,
-    scrollDirection: 'none',
-    lastScrollTop: 0,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMounted: !this.props.isHome,
+      menuOpen: false,
+      scrollDirection: 'none',
+      lastScrollTop: 0,
+    };
+  }
 
   componentDidMount() {
     setTimeout(
