@@ -3,15 +3,16 @@
   "description": "Personal Website v1",
   "version": "1.0.0",
   "author": "Piotr Napierala <piotr.napierala94@gmail.com>",
-  "homepage": "./",
   "repository": {
     "type": "git",
     "url": "https://github.com/PiotrNap/piotr-website-v1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "serve": "gatsby serve",
@@ -23,8 +24,12 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,json,md}": ["prettier --write"],
-    "*.js": ["eslint --fix"]
+    "*.{js,css,json,md}": [
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "animejs": "^3.1.0",
@@ -32,6 +37,7 @@
     "gatsby": "^2.18.7",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-google-analytics": "^2.1.29",
+    "gatsby-plugin-ipfs": "^2.0.2",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-netlify": "^2.1.27",
     "gatsby-plugin-offline": "^3.0.27",
