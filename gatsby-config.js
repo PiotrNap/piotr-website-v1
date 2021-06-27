@@ -1,7 +1,6 @@
 const config = require('./src/config');
 
 module.exports = {
-  pathPrefix: '__GATSBY_IPFS_PATH_PREFIX__',
   siteMetadata: {
     title: config.siteTitle,
     siteUrl: config.siteUrl,
@@ -14,7 +13,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-ipfs`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
