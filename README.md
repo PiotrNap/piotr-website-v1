@@ -1,4 +1,4 @@
-This is my personal website build with Gatsby.
+This is my personal website built with Gatsby.
 
 ---
 
