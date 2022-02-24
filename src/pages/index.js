@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Layout, Hero, About, Featured, Contact } from '@components';
+import { Layout, Hero, About, Featured, Contact, Cobuild } from '@components';
 import styled from 'styled-components';
 import { Main } from '@styles';
 
@@ -9,17 +9,19 @@ const StyledMainContainer = styled(Main)`
   counter-reset: section;
 `;
 
-const IndexPage = ({ location, data }) => (
-  <Layout location={location}>
-    <StyledMainContainer className="fillHeight">
-      <Hero data={data.hero.edges} />
-      <About data={data.about.edges} />
-      <Featured data={data.featured.edges} />
-      <Contact data={data.contact.edges} />
-    </StyledMainContainer>
-  </Layout>
-);
-
+const IndexPage = ({ location, data }) => {
+  return (
+    <Layout location={location}>
+      <StyledMainContainer className="fillHeight">
+        <Hero data={data.hero.edges} />
+        <About data={data.about.edges} />
+        <Featured data={data.featured.edges} />
+        <Cobuild data={data.cobuild.edges} />
+        <Contact data={data.contact.edges} />
+      </StyledMainContainer>
+    </Layout>
+  );
+};
 IndexPage.propTypes = {
   location: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
@@ -79,6 +81,16 @@ export const pageQuery = graphql`
             github
             external
             available
+          }
+          html
+        }
+      }
+    }
+    cobuild: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/cobuild/" } }) {
+      edges {
+        node {
+          frontmatter {
+            title
           }
           html
         }

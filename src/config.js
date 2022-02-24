@@ -1,13 +1,13 @@
 module.exports = {
-  siteTitle: 'Piotr Napierala | Frontend Developer',
+  siteTitle: 'Piotr Napierala | Full Stack Developer',
   siteDescription:
-    'Piotr Napierala is a passionate front-end web developer, who is enjoying building beautiful websites, applications and everything around it.',
+    "Piotr Napierala is a passionate full-stack developer, that's enjoying building impactful applications and solving difficult problems.",
   siteKeywords:
-    'Piotr Napierala, web developer, frontend engineer, javascript, belgium, user experience, react, web design',
+    'Piotr Napierala, web developer, frontend engineer, full stack, javascript, freelance, user experience, blockchain, react, web design',
   siteUrl: 'https://piotrnap.com',
   siteLanguage: 'en_US',
   name: 'Piotr Napierala',
-  location: 'Arendonk, Belgium',
+  location: 'Belgium',
   email: 'piotr.napierala94@gmail.com',
   github: 'https://github.com/PiotrNap',
   googleAnalyticsID: 'process.env.GOOGLE_ANALYTICS_TRACKING_ID' || 'none',
@@ -44,15 +44,12 @@ module.exports = {
       url: '/#contact',
     },
   ],
-
   navHeight: 100,
-
   colors: {
     gold: '#e6a52b',
     blue: '#112554',
     darkBlue: '#0b1129',
   },
-
   srConfig: (delay = 200) => ({
     origin: 'bottom',
     distance: '20px',
