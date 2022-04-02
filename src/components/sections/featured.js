@@ -257,7 +257,9 @@ const Featured = ({ data }) => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover, available } = frontmatter;
+            const { external, title, tech, github, cover, available, show } = frontmatter;
+
+            if (!show) return;
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>

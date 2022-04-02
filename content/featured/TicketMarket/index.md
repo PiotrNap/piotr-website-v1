@@ -10,6 +10,7 @@ tech:
   - Typescript
   - Next.js
 available: false
+show: true
 ---
 
 A web app build with a microservices approach for creating, buying and selling tickets to others.

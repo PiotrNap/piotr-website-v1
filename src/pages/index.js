@@ -81,6 +81,7 @@ export const pageQuery = graphql`
             github
             external
             available
+            show
           }
           html
         }
