@@ -10,6 +10,7 @@ tech:
   - Express
   - MongoDB
 available: true
+show: true
 ---
 
 A social media platform for connecting with other developers. Make your own profile, add your experience, education and social media links and start socializing! You can post your thoughts that are visible for others, like or dislike the post or leave a comment for further conversation.

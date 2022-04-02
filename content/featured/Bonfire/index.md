@@ -9,7 +9,8 @@ tech:
   - Node.js
   - PostgreSQL
   - Cardano blockchain
-available: true
+available: false
+show: false
 ---
 
 This is a mobile application for allowing people to schedule their time with others,

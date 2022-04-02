@@ -241,7 +241,6 @@ const StyledProject = styled.div`
 `;
 
 const Cobuild = ({ data }) => {
-  console.log(data);
   // const featuredProjects = data.filter(({ node }) => node);
 
   const revealTitle = useRef(null);
@@ -250,8 +249,6 @@ const Cobuild = ({ data }) => {
     sr.reveal(revealTitle.current, srConfig());
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
-
-  console.log(revealProjects);
 
   return <></>;
 

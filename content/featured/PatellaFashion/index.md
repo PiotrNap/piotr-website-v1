@@ -8,6 +8,7 @@ tech:
   - Woocommerce
   - PayPal
 available: true
+show: true
 ---
 
 An online store for a company selling african theme clothes and accessoires. Built with Wordpress and WooCommerce platform. Hosted on Siteground.

@@ -10,6 +10,7 @@ tech:
   - OAuth 2.0
   - Mongoose
 available: true
+show: true
 ---
 
 Full stack app built with MERN (Mongo, Express, React, Node) Stack, used to create surveys and send them to single/multiple recipients through a third party API. Purchase fake credits with Stripe API and track your survey results in your dashboard.
